@@ -1,0 +1,810 @@
+{
+    "files_paths": {
+        "crash_records_file_path": "crash_dataset/raw_datasets/crash_records/raw_total_crash_dataset.csv",
+        "study_area_file_path": "crash_dataset/raw_datasets/study_area/CN_boundary/CN_boundary.shp",
+        "tulsa_urban_area_file_path": "crash_dataset/raw_datasets/study_area/tulsa_urban_area/Tulsa_Urban_Area.shp",
+    
+        "final_dataset_path": "crash_dataset/final_datasets/final_crash_dataset.csv"
+    
+    },
+    
+    "attributes_id2name": {
+        "county": {
+            "1": "Adair",
+            "2": "Alfalfa",
+            "3": "Atoka",
+            "4": "Beaver",
+            "5": "Beckham",
+            "6": "Blaine",
+            "7": "Bryan",
+            "8": "Caddo",
+            "9": "Canadian",
+            "10": "Carter",
+            "11": "Cherokee",
+            "12": "Choctaw",
+            "13": "Cimarron",
+            "14": "Cleveland",
+            "15": "Coal",
+            "16": "Comanche",
+            "17": "Cotton",
+            "18": "Craig",
+            "19": "Creek",
+            "20": "Custer",
+            "21": "Delaware",
+            "22": "Dewey",
+            "23": "Ellis",
+            "24": "Garfield",
+            "25": "Garvin",
+            "26": "Grady",
+            "27": "Grant",
+            "28": "Greer",
+            "29": "Harmon",
+            "30": "Harper",
+            "31": "Haskell",
+            "32": "Hughes",
+            "33": "Jackson",
+            "34": "Jefferson",
+            "35": "Johnston",
+            "36": "Kay",  
+            "37": "Kingfisher",
+            "38": "Kiowa",
+            "39": "Latimer",
+            "40": "LeFlore",
+            "41": "Lincoln",
+            "42": "Logan",
+            "43": "Love",
+            "44": "McClain",
+            "45": "McCurtain",
+            "46": "McIntosh",
+            "47": "Major",
+            "48": "Marshall",
+            "49": "Mayes",
+            "50": "Murray",
+            "51": "Muskogee",
+            "52": "Noble",
+            "53": "Nowata",
+            "54": "Okfuskee",
+            "55": "Oklahoma",
+            "56": "Okmulgee",
+            "57": "Osage",
+            "58": "Ottawa",
+            "59": "Pawnee",
+            "60": "Payne",
+            "61": "Pittsburg",
+            "62": "Pontotoc",
+            "63": "Pottawatomie",
+            "64": "Pushmataha",
+            "65": "Roger Mills",
+            "66": "Rogers",
+            "67": "Seminole",
+            "68": "Sequoyah",
+            "69": "Stephens",
+            "70": "Texas",
+            "71": "Tillman",
+            "72": "Tulsa",
+            "73": "Wagoner",
+            "74": "Washington",
+            "75": "Washita",
+            "76": "Woods",
+            "77": "Woodward"
+        },
+    
+        "severity_level": {
+            "1": "property_damage",
+            "2": "possible_injury",
+            "3": "non_incapacitating_injury",
+            "4": "incapacitating_injury",
+            "5": "fatal"
+        },
+    
+        "weather_condition": {
+            "1": "Clear",
+            "2": "Fog/Smoke",
+            "3": "Cloudy",
+            "4": "Rain",
+            "5": "Snow",
+            "6": "Sleet/Hail/Freezing Rain",
+            "7": "Severe Crosswind",
+            "8": "Blowing Snow",
+            "9": "Blowing Dust/Sand",
+            "10": "Other"
+        },
+    
+        "lighting_condition": {
+            "1": "Daylight",
+            "2": "Dark / Unlighted",
+            "3": "Dark / Lighted",
+            "4": "Dawn",
+            "5": "Dusk",
+            "6": "Dark / Unknown Lighting",
+            "7": "Other"
+        },
+    
+        "highway_class": {
+            "1": "US Route",
+            "2": "Interstate",
+            "3": "Turnpike Interstate",
+            "4": "State Highway",
+            "5": "County Road",
+            "6": "City Street",
+            "7": "US Route",
+            "8": "State Highway",
+            "9": "Turnpike"
+        },
+    
+        "person_condition":{
+            "0": "NA",
+            "1": "Apparently Normal",
+            "2": "Drinking - Ability Impaired",
+            "3": "Odor of Alcohol Beverage",
+            "4": "Illigal Drugs",
+            "5": "Under the Influence of Medication",
+            "6": "Very Tired",
+            "7": "Sleepy",
+            "8": "Ill (Sick)",
+            "9": "Dizzy/Faint",
+            "10": "Emotional (depressed, angry, disturbed, etc.)",
+            "11": "Other",
+            "99": "Unknown"
+        },
+    
+        "intersection_rel":{
+            "0": "0",
+            "1": "1",
+            "2": "1",
+            "3": "0",
+            "4": "0",
+            "5": "0",
+            "6": "0",
+            "7": "0",
+            "8": "0",
+            "9": "0",
+            "?": "0"
+        }
+    },
+
+    "attributes_names": {
+        "Doc ID": "crash_id",
+    
+        "County #": "county",
+        "City #": "city",
+    
+        "Control #": "control_id",
+        "Int ID #": "intersection_id",
+        "Milepoint": "milepoint",
+        "Hwy Name": "highway_name",
+        "Hwy Class": "highway_class",
+    
+        "Special Feature 1": "special_feature_1",
+        "Special Feature 2": "special_feature_2",
+    
+        "Int. Rel.": "intersection_rel",
+    
+        "#Vis. Injured": "visual_injured_num",
+    
+        "# Killed": "fatal_num",
+    
+        "Type of Collision (Derived)": "crash_type",
+    
+        "Severity": "severity_level",
+    
+        "Date": "date",
+        "Collision Time": "time",
+    
+        "Latitude (Derived)": "latitude",
+        "Longitude (Derived)": "longitude",
+    
+        "# Vehicles": "number_of_vehicles",
+        "# Commercial Vehicles": "number_of_commercial_vehicles",
+    
+        "Work Zone": "work_zone",
+        "Railroad Crossing": "railroad_crossing",
+    
+        "Alcohol Involved": "alcohol",
+        "Drugs Involved": "drug",
+    
+        "Manner of Collision": "manner_of_collision",
+    
+        "Light Conditions": "lighting_condition",
+        "Weather Conditions": "weather_condition",
+        "Road Condition": "road_condition",
+    
+        "# Suspected Serious Injured": "suspected_serious_injured_num",
+        "# Non-Incapacitated Injured": "non_incapacitated_injured_num",
+        "# Possibly Injured": "possibly_injured_num",
+    
+        "# Pedestrians": "pedestrians_num",
+    
+        "Collision Unsafe Unlawful (Derived)": "collision_unsafe_unlawful",
+        "Collision Unsafe Unlawful Code (Derived)": "collision_unsafe_unlawful_code",
+        "Roadway Departure (Derived)": "roadway_departure",
+        "Cross Centerline (Derived)": "cross_centerline",
+    
+        "Unit Type": "unit_type",
+        "Vehicle Type": "vehicle_type",
+    
+        "Unsafe/Unlaw": "unsafe_unlaw_id",
+    
+        "Hit and Run": "hit_and_run",
+        "Emergency Vehicle Use": "emergency_vehicle_use",
+    
+        "Age": "age",
+        "Sex": "sex",
+        "Driver of Vehicle": "driver_of_vehicle",
+        "Injury Severity": "injury_severity",
+        "Person Condition": "person_condition",
+        "Restraint use": "restraint_use",
+    
+        "alcohol_or_drug": "alcohol_or_drug",
+        "main_crash_type": "main_crash_type",
+        "sleepy_ill_dizzy_driver": "sleepy_ill_dizzy_driver",
+    
+        "teen_driver": "teen_driver",
+        "older_driver": "older_driver",
+    
+        "unsafe_unlaw_category" : "unsafe_unlaw_category",
+        "unsafe_unlaw_description" : "unsafe_unlaw_description",
+    
+        "region": "region"
+    },
+
+    "regions": {
+        "northern": ["Tulsa", "Washington", "Nowata", "Craig", "Ottawa", "Rogers", "Mayes", "Delaware"],
+        "southern": ["Wagoner", "Cherokee", "Adair", "Muskogee", "Sequoyah", "McIntosh"]
+    },
+
+    "unsafe_unlaw_actions": [
+        {
+            "id": 1,
+            "category": "Failed to Yield",
+            "description": "From Stop Sign"
+        },
+        {
+            "id": 2,
+            "category": "Failed to Yield",
+            "description": "From Yield Sign"
+        },
+        {
+            "id": 3,
+            "category": "Failed to Yield",
+            "description": "Private Drive"
+        },
+        {
+            "id": 4,
+            "category": "Failed to Yield",
+            "description": "County Road at Through Highway"
+        },
+        {
+            "id": 5,
+            "category": "Failed to Yield",
+            "description": "From Signal Light"
+        },
+        {
+            "id": 6,
+            "category": "Failed to Yield",
+            "description": "From Alley"
+        },
+        {
+            "id": 7,
+            "category": "Failed to Yield",
+            "description": "To Pedestrian"
+        },
+        {
+            "id": 8,
+            "category": "Failed to Yield",
+            "description": "To Vehicle on Right"
+        },
+        {
+            "id": 9,
+            "category": "Failed to Yield",
+            "description": "To Vehicle in Intersection"
+        },
+        {
+            "id": 10,
+            "category": "Failed to Yield",
+            "description": "To Emergency Vehicles"
+        },
+        {
+            "id": 12,
+            "category": "Failed to Yield",
+            "description": "Other"
+        },
+        {
+            "id": 13,
+            "category": "Followed too Closely",
+            "description": "Human Element"
+        },
+        {
+            "id": 14,
+            "category": "Followed too Closely",
+            "description": "Traffic Condition"
+        },
+        {
+            "id": 15,
+            "category": "Followed too Closely",
+            "description": "Weather Condition"
+        },
+        {
+            "id": 16,
+            "category": "Unsafe Speed",
+            "description": "Driver's Ability (Aged)"
+        },
+        {
+            "id": 17,
+            "category": "Unsafe Speed",
+            "description": "Inexperienced Driver - Young"
+        },
+        {
+            "id": 18,
+            "category": "Unsafe Speed",
+            "description": "Exceeding Legal Limit"
+        },
+        {
+            "id": 19,
+            "category": "Unsafe Speed",
+            "description": "For Traffic Conditions"
+        },
+        {
+            "id": 20,
+            "category": "Unsafe Speed",
+            "description": "For Type of Roadway (Pavement Surface)"
+        },
+        {
+            "id": 21,
+            "category": "Unsafe Speed",
+            "description": "For Ice or Snow on Roadway"
+        },
+        {
+            "id": 22,
+            "category": "Unsafe Speed",
+            "description": "Rain or Wet Roadway"
+        },
+        {
+            "id": 23,
+            "category": "Unsafe Speed",
+            "description": "Wind"
+        },
+        {
+            "id": 24,
+            "category": "Unsafe Speed",
+            "description": "Other Weather Condition"
+        },
+        {
+            "id": 25,
+            "category": "Unsafe Speed",
+            "description": "Vehicle Condition"
+        },
+        {
+            "id": 26,
+            "category": "Unsafe Speed",
+            "description": "View Obstruction"
+        },
+        {
+            "id": 27,
+            "category": "Unsafe Speed",
+            "description": "On Curve/Turn"
+        },
+        {
+            "id": 28,
+            "category": "Unsafe Speed",
+            "description": "Impeding Traffic"
+        },
+        {
+            "id": 29,
+            "category": "Unsafe Speed",
+            "description": "Other"
+        },
+        {
+            "id": 30,
+            "category": "Improper Turn",
+            "description": "From Wrong Lane"
+        },
+        {
+            "id": 31,
+            "category": "Improper Turn",
+            "description": "From Direct Course"
+        },
+        {
+            "id": 32,
+            "category": "Improper Turn",
+            "description": "Right"
+        },
+        {
+            "id": 33,
+            "category": "Improper Turn",
+            "description": "Left"
+        },
+        {
+            "id": 34,
+            "category": "Improper Turn",
+            "description": "Turn About/U-Turn"
+        },
+        {
+            "id": 35,
+            "category": "Improper Turn",
+            "description": "To Enter Private Drive"
+        },
+        {
+            "id": 36,
+            "category": "Improper Turn",
+            "description": "In Front of Oncoming Traffic"
+        },
+        {
+            "id": 37,
+            "category": "Improper Turn",
+            "description": "Other"
+        },
+        {
+            "id": 38,
+            "category": "Changed Lanes Unsafely",
+            "description": "Changed Lanes Unsafely"
+        },
+        {
+            "id": 39,
+            "category": "Stopped in Traffic Lane",
+            "description": "Stopped in Traffic Lane"
+        },
+        {
+            "id": 40,
+            "category": "Failed to Stop",
+            "description": "For Stop Sign"
+        },
+        {
+            "id": 41,
+            "category": "Failed to Stop",
+            "description": "For Traffic Signal"
+        },
+        {
+            "id": 42,
+            "category": "Failed to Stop",
+            "description": "For School Bus"
+        },
+        {
+            "id": 43,
+            "category": "Failed to Stop",
+            "description": "For Railroad Gates/Signal"
+        },
+        {
+            "id": 44,
+            "category": "Failed to Stop",
+            "description": "For Officer/Flagman"
+        },
+        {
+            "id": 45,
+            "category": "Failed to Stop",
+            "description": "At Sidewalk/Stopline"
+        },
+        {
+            "id": 46,
+            "category": "Failed to Stop",
+            "description": "Other"
+        },
+        {
+            "id": 47,
+            "category": "Unsafe Vehicle",
+            "description": "Brakes"
+        },
+        {
+            "id": 48,
+            "category": "Unsafe Vehicle",
+            "description": "Steering"
+        },
+        {
+            "id": 49,
+            "category": "Unsafe Vehicle",
+            "description": "Tires"
+        },
+        {
+            "id": 50,
+            "category": "Unsafe Vehicle",
+            "description": "Suspension"
+        },
+        {
+            "id": 51,
+            "category": "Unsafe Vehicle",
+            "description": "Headlights"
+        },
+        {
+            "id": 52,
+            "category": "Unsafe Vehicle",
+            "description": "Tail Lights"
+        },
+        {
+            "id": 53,
+            "category": "Unsafe Vehicle",
+            "description": "Stop Lights"
+        },
+        {
+            "id": 54,
+            "category": "Unsafe Vehicle",
+            "description": "Wheel"
+        },
+        {
+            "id": 55,
+            "category": "Unsafe Vehicle",
+            "description": "Exhaust System"
+        },
+        {
+            "id": 56,
+            "category": "Unsafe Vehicle",
+            "description": "Windshield Wipers"
+        },
+        {
+            "id": 57,
+            "category": "Unsafe Vehicle",
+            "description": "Other Mechanical Defect"
+        },
+        {
+            "id": 58,
+            "category": "Left of Center",
+            "description": "In Meeting"
+        },
+        {
+            "id": 59,
+            "category": "Left of Center",
+            "description": "No Passing Zone (Unmarked)"
+        },
+        {
+            "id": 60,
+            "category": "Left of Center",
+            "description": "Marked Zone"
+        },
+        {
+            "id": 61,
+            "category": "Left of Center",
+            "description": "Other"
+        },
+        {
+            "id": 62,
+            "category": "Improper Overtaking",
+            "description": "In Marked Zone"
+        },
+        {
+            "id": 63,
+            "category": "Improper Overtaking",
+            "description": "On Hill/Curve"
+        },
+        {
+            "id": 64,
+            "category": "Improper Overtaking",
+            "description": "At Intersection"
+        },
+        {
+            "id": 65,
+            "category": "Improper Overtaking",
+            "description": "Without Sufficient Clearance"
+        },
+        {
+            "id": 66,
+            "category": "Improper Overtaking",
+            "description": "Other"
+        },
+        {
+            "id": 67,
+            "category": "Improper Parking",
+            "description": "On Roadway"
+        },
+        {
+            "id": 68,
+            "category": "Improper Parking",
+            "description": "Where Prohibited"
+        },
+        {
+            "id": 69,
+            "category": "Improper Parking",
+            "description": "Other"
+        },
+        {
+            "id": 70,
+            "category": "Inattention",
+            "description": "Distracted by Passenger in Vehicle"
+        },
+        {
+            "id": 71,
+            "category": "Inattention",
+            "description": "Other Distraction Inside Vehicle"
+        },
+        {
+            "id": 72,
+            "category": "Inattention",
+            "description": "Distraction from Outside Vehicle"
+        },
+        {
+            "id": 73,
+            "category": "Inattention",
+            "description": "Other"
+        },
+        {
+            "id": 74,
+            "category": "Wrong Way",
+            "description": "On One Way"
+        },
+        {
+            "id": 75,
+            "category": "Wrong Way",
+            "description": "On Exit Ramp"
+        },
+        {
+            "id": 76,
+            "category": "Wrong Way",
+            "description": "On Entrance Ramp"
+        },
+        {
+            "id": 77,
+            "category": "Wrong Way",
+            "description": "Other"
+        },
+        {
+            "id": 78,
+            "category": "Improper Start From",
+            "description": "Parked Position"
+        },
+        {
+            "id": 79,
+            "category": "Improper Start From",
+            "description": "Other"
+        },
+        {
+            "id": 80,
+            "category": "Alcohol-DUI/DWI",
+            "description": "Alcohol-DUI/DWI"
+        },
+        {
+            "id": 81,
+            "category": "Drug-DUI",
+            "description": "Drug-DUI"
+        },
+        {
+            "id": 82,
+            "category": "Failed to Signal",
+            "description": "Failed to Signal"
+        },
+        {
+            "id": 83,
+            "category": "Disregarded Warning Signal",
+            "description": "Disregarded Warning Signal"
+        },
+        {
+            "id": 84,
+            "category": "Improper Use of Lane",
+            "description": "Improper Use of Lane"
+        },
+        {
+            "id": 85,
+            "category": "Improper Backing",
+            "description": "Improper Backing"
+        },
+        {
+            "id": 86,
+            "category": "Apparently Sleepy",
+            "description": "Apparently Sleepy"
+        },
+        {
+            "id": 87,
+            "category": "Failed to Secure Load",
+            "description": "Failed to Secure Load"
+        },
+        {
+            "id": 88,
+            "category": "Other Improper Act/Movement",
+            "description": "Other"
+        },
+        {
+            "id": 89,
+            "category": "Deer in Roadway",
+            "description": "Deer in Roadway"
+        },
+        {
+            "id": 90,
+            "category": "Animal in Roadway",
+            "description": "Animal in Roadway"
+        },
+        {
+            "id": 91,
+            "category": "Domestic Animal in Roadway",
+            "description": "Domestic Animal in Roadway"
+        },
+        {
+            "id": 92,
+            "category": "Avoiding Other Vehicle",
+            "description": "Avoiding Other Vehicle"
+        },
+        {
+            "id": 93,
+            "category": "Avoiding Pedestrian",
+            "description": "Avoiding Pedestrian"
+        },
+        {
+            "id": 94,
+            "category": "Object/Debris in Roadway",
+            "description": "Object/Debris in Roadway"
+        },
+        {
+            "id": 95,
+            "category": "Defect in Roadway",
+            "description": "Defect in Roadway"
+        },
+        {
+            "id": 96,
+            "category": "Abnormal Traffic Control",
+            "description": "Abnormal Traffic Control"
+        },
+        {
+            "id": 97,
+            "category": "Improper Bicyclist Action",
+            "description": "Improper Bicyclist Action"
+        },
+        {
+            "id": 98,
+            "category": "No Improper Action by Driver",
+            "description": "No Improper Action by Driver"
+        },
+        {
+            "id": 99,
+            "category": "Pedestrian Action",
+            "description": "Pedestrian Action"
+        }
+    ],
+
+    "focused_columns": [
+        "crash_id",
+
+        "county", "region",
+
+        "highway_name", "highway_class", "intersection_rel",
+
+        "special_feature_1", "special_feature_2",
+
+        "severity_level",  "visual_injured_num", "fatal_num", "suspected_serious_injured_num",
+        "non_incapacitated_injured_num", "possibly_injured_num",
+        
+        "crash_type", "main_crash_type",
+        
+        "latitude", "longitude",
+
+        "year", "date", "time",
+        
+        "number_of_vehicles", "number_of_commercial_vehicles",
+
+        "work_zone", "railroad_crossing",
+        
+        "alcohol", "drug", "alcohol_or_drug",
+
+        "weather_condition", "lighting_condition", "road_condition", "manner_of_collision",
+        
+        "pedestrians_num",
+        
+        "roadway_departure", "cross_centerline", "hit_and_run", "emergency_vehicle_use",
+        
+        "unit_type", "vehicle_type", "age", "sex", "driver_of_vehicle", "injury_severity", "person_condition",
+
+        "restraint_use", 
+
+        "older_driver", "teen_driver", "sleepy_ill_dizzy_driver",
+        
+        "unsafe_unlaw_category", "unsafe_unlaw_desc",
+
+        "Abnormal Traffic Control", "Alcohol-DUI/DWI", "Animal in Roadway",
+        "Apparently Sleepy", "Avoiding Other Vehicle", "Avoiding Pedestrian",
+        "Changed Lanes Unsafely", "Deer in Roadway", "Defect in Roadway",
+        "Disregarded Warning Signal", "Domestic Animal in Roadway", "Drug-DUI",
+        "Failed to Secure Load", "Failed to Signal", "Failed to Stop",
+        "Failed to Yield", "Followed too Closely", "Improper Backing",
+        "Improper Bicyclist Action", "Improper Overtaking", "Improper Parking",
+        "Improper Start From", "Improper Turn", "Improper Use of Lane",
+        "Inattention", "Left of Center", "No Improper Action by Driver",
+        "Object/Debris in Roadway", "Other Improper Act/Movement",
+        "Pedestrian Action", "Stopped in Traffic Lane", "Unsafe Speed",
+        "Unsafe Vehicle", "Wrong Way"
+    ],
+
+    "sleepy_ill_dizzy_driver_conditions": ["Very Tired", "Sleepy", "Ill (Sick)", "Dizzy/Faint"],
+
+    "acceptable_severity_levels": [1, 2, 3, 4, 5],
+
+    "epsg": 4326,
+    
+    "young_driver_threshold": 19,
+    "older_driver_threshold": 65
+
+}

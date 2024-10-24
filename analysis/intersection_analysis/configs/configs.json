@@ -1,0 +1,47 @@
+{
+    "files_paths": {
+        "intersections_dataset_path": "intersection_dataset/final_datasets/intersections_without_duplicate.shp",
+        "crashes_dataset_path": "crash_dataset/final_datasets/final_crash_dataset.csv",
+
+        "merged_crashes_with_intersections_path": "analysis/intersection_analysis/outputs/merged_crashes_with_intersections/merged_crashes_with_intersections.csv",
+
+        "total_crash_rates_csv_path": "analysis/intersection_analysis/outputs/crash_rate/all_reasons/all_severity_levels/csv/intersections_total_edpo.csv",
+        "total_crash_rates_shp_path": "analysis/intersection_analysis/outputs/crash_rate/all_reasons/all_severity_levels/shapefile/intersections_total_edpo.shp",
+
+        "HIN_crash_rates_csv_path": "analysis/intersection_analysis/outputs/crash_rate/all_reasons/HIN/csv/intersections_total_edpo.csv",
+        "HIN_crash_rates_shp_path": "analysis/intersection_analysis/outputs/crash_rate/all_reasons/HIN/shapefile/intersections_total_edpo.shp",
+        
+        "total_crashes_csv_path": "analysis/intersection_analysis/outputs/total_crashes_count/all_reasons/csv/intersections_total_crashes.csv",
+        "total_crashes_shp_path": "analysis/intersection_analysis/outputs/total_crashes_count/all_reasons/shapefile/intersections_total_crashes.shp",
+
+        "main_reasons_crash_datasets_path": "analysis/crash_analysis/outputs/heatmaps/",
+
+        "main_reasons_total_crash_rates_csv_path": "analysis/intersection_analysis/outputs/crash_rate/single_reasons/all_severity_levels/csv/",
+        "main_reasons_total_crash_rates_shp_path": "analysis/intersection_analysis/outputs/crash_rate/single_reasons/all_severity_levels/shapefile/",
+
+        "main_reasons_total_crashes_csv_path": "analysis/intersection_analysis/outputs/total_crashes_count/single_reasons/csv/",
+        "main_reasons_total_crashes_shp_path": "analysis/intersection_analysis/outputs/total_crashes_count/single_reasons/shapefile/",
+
+        "main_reasons_HIN_crash_rates_csv_path": "analysis/intersection_analysis/outputs/crash_rate/single_reasons/HIN/csv/",
+        "main_reasons_HIN_crash_rates_shp_path": "analysis/intersection_analysis/outputs/crash_rate/single_reasons/HIN/shapefile/",
+
+        "high_yearly_intersection_occurrences_csv_path": "analysis/intersection_analysis/outputs/high_yearly_intersection_occurrences/csv/high_yearly_intersection_occurrences.csv",
+        "high_yearly_intersection_occurrences_shp_path": "analysis/intersection_analysis/outputs/high_yearly_intersection_occurrences/shapefile/high_yearly_intersection_occurrences.shp"
+    },
+
+    "epsg": 4326,
+    "projected_crs": 26915,
+
+    "intersection_buffer": 350,
+
+    "epdo_rates": {
+        "fatal": 9600000,
+        "incapacitating_injury": 2553600,
+        "non_incapacitating_injury": 451200,
+        "possible_injury": 28800,
+        "property_damage": 4200
+    },
+
+    "number_of_epdo_categories": 3
+
+}

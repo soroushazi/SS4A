@@ -1,0 +1,55 @@
+{
+    "files_paths": {
+        "ready_crash_dataset": "crash_dataset/final_datasets/final_crash_dataset.csv",
+        "heatmap_save_main_path": "analysis/crash_analysis/outputs/heatmaps/",
+        "top_reasons_involvement_path": "analysis/crash_analysis/outputs/top_reasons_involvement/top_reasons_involvement.csv",
+        "all_reasons_involvement_path": "analysis/crash_analysis/outputs/all_reasons_involvement/all_reasons_involvement.csv",
+        "reasons_stat_save_main_path": "analysis/crash_analysis/outputs/reasons_stats/",
+        "only_reasons_stat_save_main_path": "analysis/crash_analysis/outputs/only_reasons_stats/"
+    },
+
+    "checkable_crash_reasons": [
+        "Alcohol or Drug",
+
+        "Bad Weather", "Bad Lighting", "Bad Road Condition",
+
+        "Sleepy/Ill/Dizzy Driver",
+
+        "Abnormal Traffic Control", "Animal in Roadway",
+        "Avoiding Other Vehicle", "Avoiding Pedestrian",
+        "Changed Lanes Unsafely", "Deer in Roadway", "Defect in Roadway",
+        "Disregarded Warning Signal", "Domestic Animal in Roadway",
+        "Failed to Secure Load", "Failed to Signal", "Failed to Stop",
+        "Failed to Yield", "Followed too Closely", "Improper Backing",
+        "Improper Bicyclist Action", "Improper Overtaking", "Improper Parking",
+        "Improper Start From", "Improper Turn", "Improper Use of Lane",
+        "Distraction", "Left of Center", "Object/Debris in Roadway",
+        "Pedestrian Action", "Stopped in Traffic Lane", "Speeding",
+        "Unsafe Vehicle", "Wrong Way"
+    ],
+
+    "human_related_crash_reasons": [
+        "Alcohol or Drug",
+
+        "Sleepy/Ill/Dizzy Driver",
+
+        "Avoiding Other Vehicle", "Avoiding Pedestrian", "Changed Lanes Unsafely",
+        "Disregarded Warning Signal", "Failed to Secure Load", "Failed to Signal",
+        "Failed to Stop", "Failed to Yield", "Followed too Closely", "Improper Backing",
+        "Improper Bicyclist Action", "Improper Overtaking", "Improper Parking",
+        "Improper Start From", "Improper Turn", "Improper Use of Lane",
+        "Distraction", "Left of Center", "Speeding", "Wrong Way"
+    ],
+
+    "checkable_crash_types": [
+        "FIXED-OBJECT", "RIGHT-ANGLE", "ANGLE-TURNING",
+        "REAR-END", "SIDESWIPE-SAME", "SIDESWIPE-OPP", "OTH-BACKING",
+        "PEDESTRIAN", "ROLLOVER", "HEAD-ON", "ANGLE-OTHER", "VEH-TRAIN",
+        "PEDAL-CYCLE", "OTH-SINGLE-VEH", "ANIMAL"
+    ],
+
+    "reason_consideration_threshold": 5,
+
+    "crash_type_consideration_threshold": 5
+
+}

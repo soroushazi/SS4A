@@ -1,0 +1,14 @@
+{   
+    "files_paths": {
+        "roadway_network_path": "roadway_dataset/final_datasets/final_roadway_network.shp",
+        "raw_intersections_save_path": "intersection_dataset/raw_datasets/raw_intersections.shp",
+        "new_raw_intersections_save_path": "intersection_dataset/raw_datasets/new_raw_intersections.shp",
+        "intersections_without_duplicate_path": "intersection_dataset/final_datasets/intersections_without_duplicate.shp"
+    
+    },
+    
+    "clean_buffer": 100,
+
+    "projected_crs": 32615
+
+}
